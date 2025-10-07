@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Registration Form</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F4F7F6;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #3498DB;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for padding and width */
+        }
+        .choice-group {
+            margin-bottom: 15px;
+        }
+        .choice-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .button-group {
+            text-align: center;
+        }
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+        input[type="reset"] {
+            background-color: #E74C3C;
+        }
+        input[type="button"] {
+            background-color: #95A5A6;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Comprehensive Registration Form</h1>
+        <!-- The <form> tag is the container for all inputs.
+             'action' specifies where to send the form data. '#' is a placeholder.
+             'method' is the HTTP method to use. 'get' is visible in URL, 'post' is hidden. -->
+        <form action="#" method="post">
+            <!-- Fieldset groups related elements. Legend is the title for the group. -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!-- type="text": A single-line text input. -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="full_name" placeholder="John Doe" required>
+                <!-- type="email": For email addresses. Browsers may provide validation. -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email_address" placeholder="you@example.com" required>
+                <!-- type="password": Hides the characters as they are typed. -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="user_password" minlength="8" required>
+                <!-- type="tel": For telephone numbers. May bring up a number pad on mobile. -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone_number" pattern="[0-9]{10}" placeholder="1234567890">
+                <!-- type="url": For web addresses. -->
+                <label for="website">Website/Portfolio:</label>
+                <input type="url" id="website" name="user_website" placeholder="https://example.com">
+            </fieldset>
+            <fieldset>
+                <legend>Additional Details</legend>
+                <!-- type="date": A date picker. -->
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="date_of_birth" max="2007-10-01" min="2000-02-02">
+                <!-- type="number": For numerical input with steppers. -->
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="years_experience" min="0" max="50" step="1" placeholder="5">
+                <!-- type="range": A slider for selecting a value in a range. -->
+                <label for="skillLevel">Skill Level (1-100):</label>
+                <input type="range" id="skillLevel" name="skill_level" min="1" max="100" value="50">
+                <!-- <textarea>: For multi-line text input. -->
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="user_bio" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <!-- type="radio": For selecting ONE option from a list. All radios in a group must have the same 'name'. -->
+                <p>Preferred Contact Method:</p>
+                <div class="choice-group">
+                    <label><input type="radio" name="contact_method" value="email" checked> Email</label>
+                    <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+                    <label><input type="radio" name="contact_method" value="slack"> Slack</label>
+                </div>
+                <!-- type="checkbox": For selecting ZERO or MORE options. -->
+                <p>Topics of Interest:</p>
+                <div class="choice-group">
+                    <label><input type="checkbox" name="interests" value="frontend"> Frontend</label>
+                    <label><input type="checkbox" name="interests" value="backend"> Backend</label>
+                    <label><input type="checkbox" name="interests" value="devops"> DevOps</label>
+                    <label><input type="checkbox" name="interests" value="uiux"> UI/UX</label>
+                </div>
+                <!-- <select> and <option>: A dropdown menu. -->
+                <label for="country">Country:</label>
+                <select id="country" name="user_country">
+                    <option value="">--Please choose an option--</option>
+                    <option value="in">India</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+                <!-- <datalist>: Provides "autocomplete" suggestions for a text input. -->
+                <label for="browser">Favorite Browser:</label>
+                <input list="browsers" id="browser" name="favorite_browser">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                    <option value="Edge">
+                    <option value="Brave">
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>File and Other Inputs</legend>
+                <!-- type="file": Allows the user to select a file from their device. -->
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="user_resume" accept=".pdf,.doc,.docx">
+                <!-- type="color": A color picker control. -->
+                <label for="profileColor">Profile Color:</label>
+                <input type="color" id="profileColor" name="profile_color" value="#3498DB">
+                <!-- type="hidden": Data that is sent with the form but not visible to the user. -->
+                <input type="hidden" name="form_version" value="1.2">
+            </fieldset>
+            <!-- Buttons -->
+            <div class="button-group">
+                <!-- type="submit": A button that submits the form data. -->
+                <input type="submit" value="Register">
+                <!-- type="reset": A button that resets all form fields to their initial values. -->
+                <input type="reset" value="Clear Form">
+                <!-- type="button": A clickable button, but with no default behavior. Usually used with JavaScript. -->
+                <input type="button" value="Generic Button" onclick="alert('Button clicked!')">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
