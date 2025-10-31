@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* table, th,td {
+            border-collapse: collapse;
+            border: 1px solid black ;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <ul type="square">
+        <li>Sunday
+           <ul>
+                <li>6:00 AM</li>
+                <li>12:00 PM</li>
+                <li>6:00 PM</li>
+                <li>12:00 AM</li>
+            </ul>
+        </li>  
+        <li>Monday</li>
+        <li>Tuesday</li>
+    </ul> -->
+
+    <!-- <table  style="border:1px solid black">
+        <caption>Student Data</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Contact_Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Samay</td>
+                <td>18</td>
+                <td>samay@gamil.com</td>
+            </tr>
+             <tr>
+                <td>Pooja</td>
+                <td>17</td>
+                <td>pooja@gamil.com</td>
+            </tr>
+             <tr>
+                <td>Sham</td>
+                <td>19</td>
+                <td>sham@gamil.com</td>
+            </tr>
+
+        </tbody>
+    </table> -->
+    <!-- http://127.0.0.1:5500/users/ragister?password=123&submit=Submit -->
+     <!-- http://127.0.0.1:5500/users/ragister?user=Ravi&password=123&submit=Submit -->
+
+
+    <form action="/users/ragister" method="get">
+        <label for="username" >Your Name</label>
+        <input type="text" id="username" name="user">
+        <br>
+        <label for="password">Your Password</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" required placeholder="Enter your email here">
+        <br>
+        <label for="">Select one of the option</label>
+        <select name="" id="">
+            <option value="">Select Option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <br>
+        <label for="">Color</label>
+        <input type="color">
+        <br>
+        <label for="">Date</label>
+        <input type="date" min="2025-10-01" max="2025-10-31">
+        <br>
+        <label for="">Time</label>
+        <input type="time" min="12-00-00" max="13-00-00">
+        <br>
+        <label for="">URL</label>
+        <input type="url">
+        <br>
+        <p>Select Gender</p>
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="m">
+        <label for="">Female</label>
+        <input type="radio" name="gender" value="f">
+        <label for="">Others</label>
+        <input type="radio" name="gender" value="o">
+        <br>
+        <p>Select A Value</p>
+        <label for="">Value 1</label>
+        <input type="checkbox" name="enter" value="1">
+        <label for="">Value 2</label>
+        <input type="checkbox" name="enter" value="2">
+        <label for="">Value 3</label>
+        <input type="checkbox" name="enter" value="3">
+        <br>
+        <label for="">File</label>
+        <input type="file">
+        <br>
+        <label for="">Range</label>
+        <input type="range" min="10" max="50" value="20">
+        <br>
+        <input type="reset">
+        <input type="submit" name="submit" id="submit">
+
+    </form>
+
+</body>
+</html>

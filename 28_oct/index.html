@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="IndexStyle.css">
+    <!-- <style>
+        .mainP {
+            color:blue
+        }
+
+
+        #mainDiv{
+            border: 2px solid red;
+        }
+    </style> -->
+
+    <style>
+                /* body > div {
+                    background-color: green;
+                } */
+
+                 /* div > .innerDiv >h2  {
+                    background-color: green;
+                } */
+
+                /* .div2 p{
+                    color : gray
+                } */
+
+               /* h2 , p , div {
+                color : pink ;
+               } */
+
+               #innerDiv > h2  /* all the h2 who are child of innerDiv */
+               #innerDiv h2 /* all the h2 who are inside innerDiv */
+               #innerDiv + h2 /* only the h2 who comes after innerDiv */
+     </style>
+</head>
+<!-- body 
+    h1 
+    div 
+        h2 
+        p 
+        p 
+        p 
+    div .div2
+        h2 
+        p 
+        p 
+        p 
+        div 
+            h2 
+            p 
+            p  -->
+
+            
+<body>
+    <h1 >Main title of the page</h1>
+    <div id="mainDiv">
+        <h2>Heading inside div</h2>
+        <p class="mainP">First p</p>
+        <p class="mainP">Second p</p>
+        <p class="mainP">Third P</p>
+    </div>
+    <div class="div2">
+       
+        <p>First p inside div2</p>
+        <p>Seond p inside div2</p>
+        <p>Third p inside div2</p>
+         <h2 class="mainP">Heading inside div2</h2>
+        <div class="innerDiv">
+            <h2>Heading inside innerDiv</h2>
+            <p>First P inside innerDiv</p>
+            <p>second P inside innerDiv</p>
+        </div>
+        <div class="innerDiv2">
+            <h2>Heading inside innerDiv</h2>
+            <p>First P inside innerDiv</p>
+            <p>second P inside innerDiv</p>
+        </div>
+    </div>
+</body>
+</html>
