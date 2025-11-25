@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Math Operations</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .box {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  input {
+    width: 93%;
+    padding: 8px;
+    margin: auto;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+  }
+
+  .btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  button {
+    flex: 1;
+    padding: 10px;
+    background: #eaeaea;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #dcdcdc;
+  }
+  #clear{
+    flex-basis: 100%; 
+    background:#ff6666; 
+    color:white;
+}
+
+  #result {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h3>Math Operations</h3>
+
+    <input id="num1" type="number" placeholder="Enter first number">
+    <input id="num2" type="number" placeholder="Enter second number">
+
+    <div class="btns">
+        <button id="add">+</button>
+        <button id="sub">-</button>
+        <button id="mul">×</button>
+        <button id="div">÷</button>
+        <button id="clear">Clear</button>
+    </div>
+
+    <div id="result">Result will appear here</div>
+</div>
+
+<script src="file.js">
+
+    //js code
+</script>
+
+</body>
+</html>

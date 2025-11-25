@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border: 1px solid;
+            box-sizing: border-box;
+            margin: 50px;
+            color: red;
+            /* transform: translate(100px,100px); */
+            transition: all 2s ease-in;
+            /* transition: all 10s ease-out; */
+            /* transition: all 2s ease-in-out 10s; */
+            /* transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 10s; */
+            /* animation: spin 5s linear infinite 3s forwards; */
+            animation: spin 5s linear infinite 3s alternate;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        div:hover{
+            /* border: 10px solid black;
+            color: rgb(14, 14, 12); */
+            /* height: 200px; */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            /* transform: translate(100px,0); */
+            /* transform: translate(100px,100px); */
+            /* transform: rotateY(360deg); */
+            
+        }
+
+        /* @keyframes spin {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: pink;
+            }
+        } */
+
+        @keyframes spin {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: pink;
+            }
+            75%{
+                background-color: blue;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        THis is Div
+    </div>
+     <div>
+        THis is Div
+    </div>
+</body>
+</html>
