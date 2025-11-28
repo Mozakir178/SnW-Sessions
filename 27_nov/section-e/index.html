@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1Element" > DOM Manipulation 
+        <span style="display: none;">
+        This is hidden</span>
+    </h1>
+    <h2>Second Child</h2>
+    <input type="text" name="abc" id="sfdf" value="105" placeholder="This is example">
+    <div id="div1" >
+        <p>P1 Tag</p>
+        <p>P2 Tag</p>
+        <!-- p {} -->
+         <!-- div > p:nth-child(2) -->
+         <!-- div p -->
+        <p>P3 Tag</p>
+    </div>
+</body>
+<script>
+    // getElementById -> unique node or unique elment 
+    // getElementsByClassName 
+    // getElementsByTagName 
+    // querySelector 
+    // querySelectorAll 
+    let h1 = document.getElementById("h1Element");
+    let pTags = document.getElementsByTagName("p");
+    pTags[2].innerText = "Third P tag changed";
+    pTags[2].setAttribute("id", "p-tag");
+    for(let i=0;i<pTags.length;i++){
+        pTags[i].innerText = `${i} P Tag` ;
+        pTags[i].style.color = "red";
+    }
+
+    // background-color - backgroundColor
+    // font-weight - fontWeight
+    // font-size - fontSize 
+    h1.style.backgroundColor = "teal";
+    
+    // let div = document.getElementById("div1");
+    // let newP = document.createElement("p");
+    // newP.innerText = "New Tag created by JS";
+    // div.appendChild(newP) ;
+    //later on, with the help of JS, we created another p tag
+//HTML Collection 
+
+    // document.querySelector(".class"); // single or multiple 
+    // document.querySelector("#id");// single element
+    // document.querySelector("tagName");
+    document.querySelector("div > p"); // single or multiple
+
+    document.querySelectorAll("div > p")// all element
+    //Node List 
+    
+
+    
+    // loop , index , access, update
+    // console.log(h1.id);
+    // console.log(h1.textContent);
+    // console.log(h1.innerText);
+    // console.log(h1.innerHTML);
+    // h1.textContent = "<h2>New Content</h2>";
+    // h1.innerText = "<h2>New Content</h2>";
+    // h1.innerHTML = "<li>New Content</li> <li>Second Element</li>";
+    // textConetent 
+    // innerText 
+    // innerHTML
+    // h1.className = "h1-element";
+    // h1.id = "newId";
+</script>
+</html>
+
+                                    <!-- html 
+                heading                                     body 
+                                                h1          h2              div 
+                                                                        p    p     p  -->
