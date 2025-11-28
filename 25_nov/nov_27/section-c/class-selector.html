@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>getElementsByClassName Task</title></head>
+<body>
+
+<p class="info">Message One</p>
+<p class="info">Message Two</p>
+<p class="info">Message Three</p>
+
+<script>
+    // TASK 1:
+    // Make all .info elements text color "green".
+    let pTags = document.getElementsByClassName("info");
+    // console.log(pTags[0])
+    for(let i = 0 ; i<pTags.length ; i++){
+        pTags[i].style.color = "green";
+    }
+    // TASK 2:
+    // Make the SECOND .info element bold.
+    pTags[1].style.fontWeight = "900";
+    // TASK 3:
+    // Add " - Updated" at the end of every .info element.
+    for(let i = 0 ; i<pTags.length ; i++){
+        pTags[i].textContent  += " Updated";
+    }
+</script>
+
+</body>
+</html>

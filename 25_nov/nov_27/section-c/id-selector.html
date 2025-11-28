@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>getElementById Task</title></head>
+<body>
+
+<h2 id="main-title">Original Heading</h2>
+<p id="tagline">Welcome to DOM Practice</p>
+
+<script>
+    // TASK 1:
+    // Change the text of #main-title to "Updated Heading".
+    let h2 = document.getElementById("main-title");
+    console.log(h2.textContent);
+    h2.textContent = "Updated Heading";
+    console.log(h2.textContent);
+    // TASK 2:
+    // Change the color of #tagline to "blue".
+    let p = document.getElementById("tagline");
+    p.style.color = "blue";
+    // TASK 3:
+    // Change the background of #main-title to "lightyellow".
+    h2.style.backgroundColor = "lightyellow";
+    // font-weight - fontWeight
+    // font-size - fontSize 
+    // margin-top - marginTop 
+</script>
+
+</body>
+</html>

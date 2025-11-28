@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>getElementsByTagName Task</title></head>
+<body>
+
+<input type="text" id="updated">
+<ul>
+    <li>Dog</li>
+    <li>Cat</li>
+    <li>Bird</li>
+</ul>
+
+
+<script>
+
+    // TASK 1:
+    // Make all <li> items bold.
+        let tags = document.getElementsByTagName("li");
+    // console.log(pTags[0])
+    for(let i = 0 ; i<tags.length ; i++){
+        tags[i].style.fontWeight = "bold";
+        tags[i].setAttribute("class","abc");
+        tags[i].setAttribute("value","new value");
+    }
+    // TASK 2:
+    // input should content data of 2nd <li>
+
+    // TASK 3:
+    // Add "!" at the end of each <li> text.
+</script>
+
+</body>
+</html>

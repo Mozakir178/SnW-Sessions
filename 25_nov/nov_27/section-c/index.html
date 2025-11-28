@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple DOM Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .item {
+      padding: 5px;
+      margin: 4px 0;
+      background: #f0f0f0;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A Simple DOM Demo Page</h1>
+
+  <!-- Section 1 -->
+  <div class="section" id="intro-section">
+    <p id="intro-text">Welcome! This page is to practice the DOM.</p>
+    <button id="changeBtn" >Click Me</button>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section" id="fruits-section">
+    <h2 class="title">Fruits</h2>
+
+    <div class="item-list">
+      <div class="item">Apple</div>
+      <div class="item highlight">Mango</div>
+      <div class="item">Orange</div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section students-section">
+    <h2 class="title">Students</h2>
+
+    <div class="student" id="student1">
+      <p class="name">Alice</p>
+      <p class="grade highlight">Grade: A</p>
+    </div>
+
+    <div class="student" id="student2">
+      <p class="name">Bob</p>
+      <p class="grade">Grade: B</p>
+    </div>
+  </div>
+
+</body>
+<script>
+    // 1. getElementById() // unique element
+    // 2. getElementByTagName()
+    // 3. getElementByClassName();
+    // 4. querySelector()
+    // 5. querySelectorAll()
+
+    let element = document.getElementById("intro-section")
+    console.log(element); 
+    element.textContent =    "Updated content";
+</script>
+</html>
+
+
+<!-- html 
+BODY 
+    h1 
+    div 
+        p 
+        img
+    div -->
